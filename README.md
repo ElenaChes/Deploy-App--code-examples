@@ -4,7 +4,7 @@ A comprehensive guide on deploying and setting up CI/CD (Continuous Integration 
 Description: includes a step by step guide, along with Dockerfile and Fly.io configuration example files.
 
 > [!NOTE]
-> While these files were written and are used specifically for Node JS apps and for deplying specifically on fly.io, they can serve as an example or template for other types of apps and hosting services too.
+> While these files were written and are used specifically for Node JS apps and for deploying specifically on fly.io, they can serve as an example or template for other types of apps and hosting services too.
 
 <details>
 
