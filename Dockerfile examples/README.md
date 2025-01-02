@@ -4,7 +4,7 @@ Examples of working Dockerfiles.<br>
 These Dockerfiles have been used for Node JS apps, so be mindful when adjusting them for different languages.
 
 > [!WARNING]
-> The files in this folder have disctinct names for easier referencing so make sure that your file is simply named `Dockerfile` without any additions.
+> The files in this folder have distinct names for easier referencing so make sure that your file is simply named `Dockerfile` without any additions.
 
 > [!NOTE]
 > Note that the examples expose port 8080, as my apps tend to have a web interface and listen to that port.<br>
