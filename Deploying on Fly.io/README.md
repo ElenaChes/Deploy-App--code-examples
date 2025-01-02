@@ -28,7 +28,7 @@ For example on `Windows` you'd open the PowerShell commandline and run:
 pwsh -Command "iwr https://fly.io/install.ps1 -useb | iex"
 ```
 
-For other operating systems you can check their documentation here: [Install flyctl](https://fly.io/docs/flyctl/install/)<br>
+For other operating systems you can check their documentation here: [Install flyctl](https://fly.io/docs/flyctl/install/).<br>
 Make sure to register on Fly.io and login into your account in the commandline.
 
 # Launching on Fly.io
@@ -83,7 +83,7 @@ The attached `fly.toml` file is one I use for Node JS apps with a web interface,
 ```
 
 > [!TIP]
-> While you're free to build using images - I find that using Node JS for launching on Fly.io uses more ram than I can afford, and at some points wouldn't launch at all... so I'd recommend using a Dockerfile as once you set one up it's pretty hassle free.
+> While you're free to build using images - I find that using Node JS images for launching on Fly.io uses more ram than I can afford, and at some points wouldn't launch at all... so I'd recommend using a Dockerfile as once you set one up it's pretty hassle free.
 
 - Open port 8080 - meaning that when the app launches it listens to post 8080, can be changed to whichever port the app listens to.
 
@@ -93,7 +93,7 @@ The attached `fly.toml` file is one I use for Node JS apps with a web interface,
   internal_port = 8080
 ```
 
-- Give the app 1 minutes of grace period - fly waits for a minute to let the app fully launch before preforming checks on the app, can be adjusted for faster apps.
+- Give the app 1 minute of grace period - fly waits for a minute to let the app fully launch before preforming checks on the app, can be adjusted for faster apps.
 
 ```
 [[services]]
@@ -141,17 +141,15 @@ The output you get is your app's token and will be needed in a moment, make sure
 1. Go to the settings of your repository.
 2. Open `Secrets and variables` on the side bar and go to `Actions`.
 3. Click `New repository secret`:
-
-- Name the secret, we're going to follow the guide and call it `FLY_API_TOKEN`.
-- Paste the token you got from fly into the Secret section.
+   - Name the secret, we're going to follow the guide and call it `FLY_API_TOKEN`.
+   - Paste the token you got from fly into the Secret section.
 
 ## fly.yml
 
 1. Create a folder in the root of your project called `.github`.
 2. Inside `.github` create another folder called `workflows`.
 3. Place `fly.yml` inside of `workflows`.
-
-- If you'd like your Github repository to automatically update the Environment it's running (in the Deployments section), add the following lines in `fly.yml` under the `deploy` category, while `APPNAME` is the name you want the Environment to have, and `APPURL` is the app's url (if it has one):
+   - If you'd like your Github repository to automatically update the Environment it's running (in the Deployments section), add the following lines in `fly.yml` under the `deploy` category, while `APPNAME` is the name you want the Environment to have, and `APPURL` is the app's url (if it has one):
 
 ```
 deploy:
@@ -173,7 +171,7 @@ Now when you push your code to Github (or create a new Release) the app will aut
 ## Environent variables
 
 - [How to read environment variables from Node.js](https://nodejs.org/en/learn/command-line/how-to-read-environment-variables-from-nodejs)
-- [dotenv](https://www.npmjs.com/package/dotenv)
+- [dotenv module](https://www.npmjs.com/package/dotenv)
 
 ## Fly.io
 
@@ -182,6 +180,7 @@ Now when you push your code to Github (or create a new Release) the app will aut
 - [Restart apps or Machines](https://fly.io/docs/apps/restart/) - `fly apps restart APPNAME`/`fly machine restart MACHINEID` (restart the app without changing its code)
 - [Set secrets](https://fly.io/docs/apps/secrets/)
 - [Scale Machine CPU and RAM](https://fly.io/docs/launch/scale-machine/)
+- [Grace period](https://fly.io/docs/getting-started/troubleshooting/#grace-period)
 - [Delete an app](https://fly.io/docs/apps/delete/) - `fly apps destroy APPNAME`
 
 ## Github
