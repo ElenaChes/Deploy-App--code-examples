@@ -1,6 +1,6 @@
 # Deploy App: code examples
 
-A comprehensive guide on deploying and setting up CI/CD (Continuous Integration & Continuous Deployment) for a Node JS app on [Fly.io](https://fly.io/).<br>
+A comprehensive guide on deploying and setting up CI/CD (Continuous Integration & Continuous Delivery) for a Node JS app on [Fly.io](https://fly.io/).<br>
 Description: includes a step by step guide, along with Dockerfile and Fly.io configuration example files.
 
 > [!NOTE]
