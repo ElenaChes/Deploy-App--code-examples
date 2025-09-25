@@ -31,12 +31,14 @@ Description: includes a step by step guide, along with Dockerfile and Fly.io con
 
 # Docker examples
 
-Contains examples of working `Dockerfiles` and some context on what type of apps they're used by.
+Contains examples of working `Dockerfiles` and some context on what type of apps they're used by.<br>
+([Go to readme](/Dockerfile%20examples))
 
 # Deploying on fly.io
 
 Step by step description of the process from deciding to deploy an app on Fly.io and to having a deployed app, alongside an explanation on setting up CI/CD using Github actions.<br>
-Also contains examples of working `fly.toml` and `fly.yml` files and explanations of their contents.
+Also contains examples of working `fly.toml` and `fly.yml` files and explanations of their contents.<br>
+([Go to readme](/Deploying%20on%20Fly.io))
 
 # App structure
 
