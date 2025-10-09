@@ -1,14 +1,13 @@
 # Dockerfile examples
 
 Examples of working Dockerfiles.<br>
-These Dockerfiles have been used for Node JS apps, so be mindful when adjusting them for different languages.
+These Dockerfiles were designed for Node.js apps. Adjust them carefully if you intend to use them with other languages.
 
 > [!WARNING]
-> The files in this folder have distinct names for easier referencing so make sure that your file is simply named `Dockerfile` without any additions.
+> The files in this folder have unique names for easier reference. Make sure your actual Dockerfile is named exactly `Dockerfile` with no extra characters.
 
 > [!NOTE]
-> Note that the examples expose port 8080, as my apps tend to have a web interface and listen to that port.<br>
-> Remove the line `EXPOSE 8080` if irrelevant.
+> These examples expose port 8080, which is typical for my apps with web interfaces. Remove or change the `EXPOSE 8080` line if your app uses a different port.
 
 <details>
 
@@ -23,36 +22,36 @@ These Dockerfiles have been used for Node JS apps, so be mindful when adjusting 
 
 # Dockerfile_generic
 
-The file I use for most apps, for example:
+This is the Dockerfile I typically use for most apps, including:
 
-- Express JS web apps
+- Express.js web apps
 - Discord bots
-- REST APIs
+- RESTful APIs
 
 # Dockerfile_puppeteer
 
-One of my projects used [puppeteer-html-pdf](https://www.npmjs.com/package/puppeteer-html-pdf), for the app to work in production it needed access to chromium and other Puppeteer's requirements to be installed in a specific order, so this is an adjusted file that worked for me.<br>
+One of my projects used [puppeteer-html-pdf](https://www.npmjs.com/package/puppeteer-html-pdf). To run in production, the app required Chromium and other Puppeteer dependencies to be installed in a specific order. This Dockerfile reflects the adjustments that worked for me.
 
 > [!NOTE]
 > This Dockerfile includes a broader set of dependencies, which you can adjust based on your specific Puppeteer needs.
 
 Additionally, my project had a file at the root of my project called `.puppeteerrc.cjs`, containing the following code:
 
-```
-const {join} = require('path');
+```js
+const { join } = require("path");
 
 /**
  * @type {import("puppeteer").Configuration}
  */
 module.exports = {
   // Changes the cache location for Puppeteer.
-  cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
+  cacheDirectory: join(__dirname, ".cache", "puppeteer"),
 };
 ```
 
 # .dockerignore
 
-Usually a `.dockerignore` file will have the same content as your `.gitignore` file, so for Node JS the following tends to be enough:
+A `.dockerignore` file often mirrors your `.gitignore`. For Node.js projects, the following is usually sufficient:
 
 ```
 .env
